@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { InstagramIcon } from './components/InstagramIcon';
 import { MatrixRain } from './components/MatrixRain';
 import { InteractiveText } from './components/InteractiveText';
-import { CursorParticles } from './components/CursorParticles';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -59,7 +58,6 @@ const App: React.FC = () => {
     <div
       className={`relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-black text-neutral-200 antialiased transition-filter duration-300 ${isFlashing ? 'filter invert' : ''}`}
     >
-      <CursorParticles />
       {konamiActive && <MatrixRain />}
       
       <header className="absolute top-0 left-0 p-8 md:p-12 z-20">
